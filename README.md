@@ -1,4 +1,4 @@
-![VRCSubtitleLogo](https://user-images.githubusercontent.com/28989460/183273617-2051ba43-59f7-4f64-9d7f-5324cfb0dc8f.png)
+![VRCSubtitle](https://user-images.githubusercontent.com/28989460/183273800-f8487827-12e2-4564-8434-d88d18b29f73.png)
 #### VRCSubtitle is a system that allows users to quickly and easily add subtitles to their projects! Designed to be performant and modular, it supports a variety of different subtitle types and usecases!
 
 ![SubtitleMain](https://user-images.githubusercontent.com/28989460/183273641-d4365703-9bc9-469e-bea6-1326d2be6e78.PNG)
