@@ -40,6 +40,7 @@
 
 - **ChangeLine(int, string)** Event: Allows you to change a subtitle during runtime, using the index of the subtitle (Number shown on the inspector-1), and the string that you wish to replace it with.
     - EX: Display a dynamically changing amount of gold that something costs as part of the subtitle.
+- Use **{PlayerName}** in your subtitles to easily display the local players name in them!
 
 ---
 ## Modifying Animations
