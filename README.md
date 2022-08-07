@@ -1,13 +1,13 @@
 ![VRCSubtitle](https://user-images.githubusercontent.com/28989460/183273832-bc709af2-5183-4966-8746-da98625ed422.png)
 #### VRCSubtitle is a system that allows users to quickly and easily add subtitles to their projects! Designed to be performant and modular, it supports a variety of different subtitle types and usecases!
-
+---
 ![SubtitleMain](https://user-images.githubusercontent.com/28989460/183273641-d4365703-9bc9-469e-bea6-1326d2be6e78.PNG)
-
+---
 ## Requirements
 - VRCSDK3 - Latest
 - Udonsharp 1.0 or higher (Get through VRChat Creator Companion)
 - TextMeshPro (Should automatically import)
-
+---
 ## Setup Instructions
 
 1) Put prefab in scene, and position either as part of a hud UI or in the world itself as a world canvas.
@@ -27,14 +27,14 @@
     - Pause: Pauses the subtitles after the end of the subtitle that it is checked on. To continue, simply call the StartPlayingLines() event again.
 
 7) Implement event call into the subtitle system in your own scripts, calling the StartPlayingLines() event when you wish to start the subtitles!
-
+---
 
 ## Extras
 
 - ChangeLine(int, string) Event: Allows you to change a subtitle during runtime, using the index of the subtitle (Number shown on the inspector-1), and the string that you wish to replace it with.
     - EX: Display a dynamically changing amount of gold that something costs as part of the subtitle.
-    
 
+---
 Copyright 2022 CentauriCore
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -49,6 +49,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+---
 ## Thanks
 
 Thank you Vowgan for helping me setup the editor inspector!
