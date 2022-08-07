@@ -43,7 +43,7 @@ namespace Centauri.SubtitleSystem
         #region Public Variables
 
         [HideInInspector] public string[] SubtitleLines;
-        public AudioClip[] SubtitleAudio;
+        [HideInInspector] public AudioClip[] SubtitleAudio;
         [HideInInspector] public float[] DelayTime;
         [HideInInspector] public float[] SubtitleLength;
         [HideInInspector] public bool[] pauseAfterLine;
@@ -121,9 +121,7 @@ namespace Centauri.SubtitleSystem
                 Text.text = SubtitleLines[currentLine]; // Allows first line to be seen without it flickering in
 
                 SubtitleAnimator.CrossFadeInFixedTime("Base Layer.OpenSubtitle", 0f);
-                
-                Debug.Log("Starting lines!");
-            
+
                 SendCustomEventDelayedSeconds(nameof(PlayLineLoop), 0.5f);
             }
             else
@@ -136,11 +134,15 @@ namespace Centauri.SubtitleSystem
                 Text.text = SubtitleLines[currentLine]; // Allows first line to be seen without it flickering in
 
                 SubtitleAnimator.CrossFadeInFixedTime("Base Layer.OpenSubtitle", 0f);
-                
-                Debug.Log("Continuing lines!");
-            
+
                 SendCustomEventDelayedSeconds(nameof(PlayLineLoop), 0.5f);
             }
+            
+            var line = SubtitleLines[currentLine];
+
+            line = line.Replace("{PlayerName}", Networking.LocalPlayer.displayName);
+            
+            Text.text = line;
         }
 
         public void ResetSubtitles()
@@ -153,9 +155,7 @@ namespace Centauri.SubtitleSystem
             isPaused = false;
             currentLine = 0;
             Text.text = "";
-            
-            Debug.Log("Resetting subtitle script!");
-            
+
             SubtitleAnimator.SetFloat("SpeedMultiplier", 1f);
             SubtitleAnimator.CrossFadeInFixedTime("TextFade.Empty", 0);
             
@@ -183,9 +183,9 @@ namespace Centauri.SubtitleSystem
                     var startTime = SubtitleLength[i];
                     float lineLength = SubtitleLines[i].Length;
 
-                    if (startTime / lineLength < 0.1f)
+                    if (startTime / lineLength < 0.05f)
                     {
-                        SubtitleLength[i] = lineLength * 0.1f;
+                        SubtitleLength[i] = lineLength * 0.05f;
                     }
 
                     SubtitleLength[i] += 1f;
@@ -203,8 +203,6 @@ namespace Centauri.SubtitleSystem
 
             if (charactersShown > SubtitleLines[currentLine].Length) return;
 
-            Debug.Log($"Characters Shown {currentLine}");
-            
             charactersShown++;
             Text.maxVisibleCharacters = charactersShown;
 
@@ -231,7 +229,7 @@ namespace Centauri.SubtitleSystem
             }
             else
             {
-                SendCustomEventDelayedSeconds(nameof(ShowNextCharacter), 0.1f);
+                SendCustomEventDelayedSeconds(nameof(ShowNextCharacter), 0.05f);
             }
         }
 
@@ -242,11 +240,6 @@ namespace Centauri.SubtitleSystem
                 Debug.Log("Subtitles have been broken! Call the ResetSubtitles function to fix!");
                 return;
             }
-            var line = SubtitleLines[currentLine];
-
-            line = line.Replace("{PlayerName}", Networking.LocalPlayer.displayName);
-            
-            Text.text = line;
 
             if (SubtitleAudio[currentLine] != null)
             {
@@ -261,7 +254,6 @@ namespace Centauri.SubtitleSystem
             isDelayed = false;
             isPaused = false;
             
-            Debug.Log($"Playing line: {SubtitleLines[currentLine]}");
             
             switch(FadeType)
             {
@@ -271,7 +263,6 @@ namespace Centauri.SubtitleSystem
                     charactersShown = 0;
                     Text.maxVisibleCharacters = charactersShown;
                     ShowNextCharacter();
-                    Debug.Log($"Line length {SubtitleLines[currentLine].Length}");
                     break;
             }
 
@@ -357,8 +348,6 @@ namespace Centauri.SubtitleSystem
             isPlayingLines = false;
             isPaused = true;
 
-            Debug.Log("Pausing lines!");
-            
             if (OptionalTargetBehaviour != null)
             {
                 OptionalTargetBehaviour.SendCustomEvent(PauseEventName);
@@ -395,8 +384,6 @@ namespace Centauri.SubtitleSystem
             }
             
             SubtitleAnimator.CrossFadeInFixedTime("Base Layer.CloseSubtitle", 0f);
-            
-            Debug.Log("Finished playing lines!");
         }
 
         #endregion
