@@ -80,7 +80,7 @@ namespace Centauri.SubtitleSystem
 
         public void StartPlayingLines()
         {
-            if (audioDisable)
+            if (audioDisable && Audio != null)
             {
                 Audio.enabled = true;
             }
@@ -130,7 +130,7 @@ namespace Centauri.SubtitleSystem
 
         public void ResetSubtitles()
         {
-            if (audioDisable)
+            if (audioDisable && Audio != null)
             {
                 Audio.enabled = false;
             }
@@ -326,7 +326,7 @@ namespace Centauri.SubtitleSystem
 
         public void PauseLines()
         {
-            if (audioDisable)
+            if (audioDisable && Audio != null)
             {
                 Audio.enabled = false;
             }
@@ -361,7 +361,7 @@ namespace Centauri.SubtitleSystem
 
         public void FinishPlayingLines()
         {
-            if (audioDisable)
+            if (audioDisable && Audio != null)
             {
                 Audio.enabled = false;
             }
