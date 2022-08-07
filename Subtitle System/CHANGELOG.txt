@@ -1,0 +1,3 @@
+v1.0.1
+
+- Fixed error preventing text from showing up at all (OOPS)

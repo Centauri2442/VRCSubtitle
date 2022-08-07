@@ -121,7 +121,7 @@ namespace Centauri.SubtitleSystem
                 Text.text = SubtitleLines[currentLine]; // Allows first line to be seen without it flickering in
 
                 SubtitleAnimator.CrossFadeInFixedTime("Base Layer.OpenSubtitle", 0f);
-
+                
                 SendCustomEventDelayedSeconds(nameof(PlayLineLoop), 0.5f);
             }
             else
@@ -137,12 +137,11 @@ namespace Centauri.SubtitleSystem
 
                 SendCustomEventDelayedSeconds(nameof(PlayLineLoop), 0.5f);
             }
-            
-            var line = SubtitleLines[currentLine];
 
-            line = line.Replace("{PlayerName}", Networking.LocalPlayer.displayName);
-            
-            Text.text = line;
+            for (var i = 0; i < SubtitleLines.Length; i++)
+            {
+                SubtitleLines[i] = SubtitleLines[i].Replace("{PlayerName}", Networking.LocalPlayer.displayName);
+            }
         }
 
         public void ResetSubtitles()
@@ -336,6 +335,7 @@ namespace Centauri.SubtitleSystem
         public void PlayNextLine()
         {
             currentLine++;
+            Text.text = SubtitleLines[currentLine];
             PlayLineLoop();
         }
 

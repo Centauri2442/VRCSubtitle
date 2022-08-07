@@ -1,4 +1,4 @@
-v1 VRCSubtitle - CentauriCore
+VRCSubtitle - CentauriCore
 
 VRCSubtitle is a system that allows users to quickly and easily add subtitles to their projects! Designed to be performant and modular, it supports a variety of different subtitle types!
 
