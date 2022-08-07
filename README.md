@@ -42,6 +42,11 @@
     - EX: Display a dynamically changing amount of gold that something costs as part of the subtitle.
 
 ---
+## Modifying Animations
+
+If you wish to modify the animations for having the subtitle system open/close, make sure to stay within the existing animation timing/length! The specifics of each animation can easily be changed through the animator, but the animations themselves are controlled by the script!
+
+---
 Copyright 2022 CentauriCore
 
 Licensed under the Apache License, Version 2.0 (the "License");
