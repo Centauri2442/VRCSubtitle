@@ -141,7 +141,7 @@ namespace Centauri.SubtitleSystem
                         {
                             using (new EditorGUILayout.HorizontalScope())
                             {
-                                GUILayout.Space(370);
+                                GUILayout.FlexibleSpace();
                                 GUILayout.Label(typewriterLinear);
                                 propTypewriterLinear.boolValue = EditorGUILayout.Toggle(propTypewriterLinear.boolValue, GUILayout.Width(30));
                             }
@@ -168,7 +168,7 @@ namespace Centauri.SubtitleSystem
                     {
                         using (new EditorGUILayout.HorizontalScope())
                         {
-                            GUILayout.Space(285);
+                            GUILayout.FlexibleSpace();
                             GUILayout.Label(new GUIContent("Disable Audio Source When Not In Use", "Disable audio source when it is not actively being used by the system!"));
                             propAudioDisable.boolValue = EditorGUILayout.Toggle(propAudioDisable.boolValue, GUILayout.Width(30));
                         }
