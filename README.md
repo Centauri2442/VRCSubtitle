@@ -8,7 +8,7 @@
 - Udonsharp 1.0 or higher (Get through VRChat Creator Companion)
 - TextMeshPro (Should automatically import)
 
-## Instructions
+## Setup Instructions
 
 1) Put prefab in scene, and position either as part of a hud UI or in the world itself as a world canvas.
 2) (Optional) Re-assign audio source to whatever source you wish for the (optional) audio clips to play from. Audio is **NOT** required though!
