@@ -154,6 +154,7 @@ namespace Centauri.SubtitleSystem
         private void Start()
         {
             numOfLines = SubtitleLines.Length;
+            Text.text = "";
 
             SendCustomEventDelayedFrames(nameof(DelayedStart), UnityEngine.Random.Range(1, 10));
         }
