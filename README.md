@@ -52,6 +52,7 @@ If you wish to modify the animations for having the subtitle system open/close, 
 ---
 ## Future Plans
 - Ability to call events on specific subtitles, rather than just on Pause and End.
+- CSV file import
 
 ---
 Copyright 2022 CentauriCore
