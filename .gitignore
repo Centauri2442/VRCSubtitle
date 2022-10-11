@@ -1,0 +1,10 @@
+/*
+!/.git
+!/.github
+!/.gitignore
+!/.gitattributes
+!/.LICENCE
+!/.README.md
+!/Assets
+/Assets/*
+!/Assets/Subtitle System
