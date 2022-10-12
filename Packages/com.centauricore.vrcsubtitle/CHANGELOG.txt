@@ -1,6 +1,7 @@
 v2.0.0
 
 - Made VRCSubtitle compatible with VRChat Package Manager
+- Fixed an IndexOutOfRangeException caused by invoking PlayNextLine() on the last line
 
 v1.0.1
 
