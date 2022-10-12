@@ -5,9 +5,6 @@
 !/.gitattributes
 !/.LICENCE
 !/.README.md
-!/Assets
-/Assets/*
-!/Assets/Subtitle System
 !/Packages
 /Packages/*
 !/Packages/com.centauricore.vrcsubtitle
