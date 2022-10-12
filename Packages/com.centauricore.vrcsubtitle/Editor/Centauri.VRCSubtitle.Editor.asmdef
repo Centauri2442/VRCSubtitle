@@ -2,9 +2,10 @@
     "name": "Centauri.VRCSubtitle.Editor",
     "references": [
         "Centauri.VRCSubtitle.Runtime",
-        "Unity.TextMeshPro",
+        "VRC.Udon",
+        "UdonSharp.Runtime",
         "UdonSharp.Editor",
-        "VRC.Udon"
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"

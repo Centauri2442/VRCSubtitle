@@ -1,9 +1,9 @@
 {
     "name": "Centauri.VRCSubtitle.Runtime",
     "references": [
+        "VRC.Udon",
         "UdonSharp.Runtime",
-        "Unity.TextMeshPro",
-        "VRC.Udon"
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
