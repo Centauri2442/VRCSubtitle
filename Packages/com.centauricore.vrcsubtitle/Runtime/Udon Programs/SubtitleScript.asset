@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: SubtitleScript
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 06da499948117d04a870e1334aab1e24,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 767bd82940c4a354fac65ade473af7ae,
     type: 2}
   udonAssembly: 
   assemblyError: 
@@ -524,7 +524,7 @@ MonoBehaviour:
       Data: 32|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: Centauri.SubtitleSystem.TextFadeType, Assembly-CSharp
+      Data: Centauri.SubtitleSystem.TextFadeType, Centauri.VRCSubtitle.Runtime
     - Name: 
       Entry: 8
       Data: 

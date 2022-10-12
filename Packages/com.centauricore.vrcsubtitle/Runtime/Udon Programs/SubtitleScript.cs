@@ -334,6 +334,8 @@ namespace Centauri.SubtitleSystem
 
         public void PlayNextLine()
         {
+            if(currentLine >= numOfLines - 1) return;
+
             currentLine++;
             Text.text = SubtitleLines[currentLine];
             PlayLineLoop();
