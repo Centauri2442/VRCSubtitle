@@ -1,0 +1,12 @@
+{
+  "name": "com.centauricore.vrcsubtitle",
+  "version": "2.0.0",
+  "description": "Udon based subtitle system designed for use within VRChat",
+  "displayName": "VRCSubtitle",
+  "author": {
+    "name": "Centauri",
+    "url": "https://github.com/Centauri2442"
+  },
+  "unity": "2019.4",
+  "unityRelease": "29f1"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Centauri.VRCSubtitle.Runtime",
+    "references": [
+        "UdonSharp.Runtime",
+        "Unity.TextMeshPro",
+        "VRC.Udon"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
